@@ -5,167 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI HOT 日报 — 2026-06-24</title>
 <style>
-/* ── Reset & Base ── */
-*,*::before,*::after { box-sizing:border-box;margin:0;padding:0; }
-html { scroll-behavior:smooth; font-size:16px; }
-body {
-  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
-  background:#0d1117; color:#c9d1d9; line-height:1.6;
-  min-height:100vh;
-}
-
-/* ── Hero ── */
-.hero {
-  background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
-  padding:3rem 1.5rem; text-align:center; position:relative; overflow:hidden;
-}
-.hero::before {
-  content:""; position:absolute; inset:0;
-  background:radial-gradient(ellipse at 30% 50%,rgba(64,169,255,0.12) 0%,transparent 60%),
-             radial-gradient(ellipse at 70% 50%,rgba(168,85,247,0.08) 0%,transparent 60%);
-}
-.hero-inner { position:relative; z-index:1; max-width:900px; margin:0 auto; }
-.hero-badge {
-  display:inline-block; padding:0.3rem 1rem; border-radius:2rem;
-  background:rgba(64,169,255,0.15); color:#58a6ff; font-size:0.85rem;
-  font-weight:600; letter-spacing:0.05em; margin-bottom:0.75rem;
-}
-.hero h1 { font-size:2.2rem; font-weight:800; margin-bottom:0.35rem; color:#f0f6fc; }
-.hero-date { font-size:1rem; color:#8b949e; margin-bottom:1.25rem; }
-.hero-total {
-  display:inline-flex; align-items:center; gap:0.4rem;
-  font-size:1.1rem; color:#58a6ff; margin-bottom:1.5rem;
-}
-.hero-total strong { font-size:2rem; font-weight:800; }
-.stats-row {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;
-  margin-top:0.5rem;
-}
-.stat {
-  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);
-  border-radius:0.75rem; padding:0.6rem 1.1rem; min-width:100px; text-align:center;
-  transition:border-color 0.2s;
-}
-.stat:hover { border-color:rgba(64,169,255,0.25); }
-.stat-num { display:block; font-size:1.4rem; font-weight:700; color:#f0f6fc; }
-.stat-label { display:block; font-size:0.75rem; color:#8b949e; margin-top:0.15rem; }
-
-/* ── Navigation ── */
-.nav-bar {
-  position:sticky; top:0; z-index:100; background:rgba(13,17,23,0.92);
-  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  padding:0.75rem 1rem; display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem;
-}
-.nav-chip {
-  display:inline-flex; align-items:center; gap:0.35rem;
-  padding:0.4rem 0.85rem; border-radius:2rem; font-size:0.85rem;
-  text-decoration:none; color:#c9d1d9; background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08); transition:all 0.2s;
-}
-.nav-chip:hover { background:rgba(64,169,255,0.12); border-color:rgba(64,169,255,0.3); color:#58a6ff; }
-.nav-badge {
-  display:inline-flex; align-items:center; justify-content:center;
-  width:1.4rem; height:1.4rem; border-radius:50%;
-  background:rgba(64,169,255,0.2); font-size:0.7rem; font-weight:700; color:#58a6ff;
-}
-
-/* ── Main Content ── */
-.main { max-width:1200px; margin:0 auto; padding:2rem 1.5rem; }
-
-.section { margin-bottom:3rem; }
-.section-title {
-  font-size:1.35rem; font-weight:700; margin-bottom:1.25rem; color:#f0f6fc;
-  display:flex; align-items:center; gap:0.5rem;
-}
-.section-count {
-  font-size:0.8rem; font-weight:400; color:#8b949e; margin-left:0.4rem;
-}
-
-/* ── Card Grid ── */
-.card-grid {
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1rem;
-}
-
-/* ── Card ── */
-.card {
-  background:#161b22; border:1px solid #21262d; border-radius:0.75rem;
-  padding:1.25rem; display:flex; gap:0.9rem; transition:border-color 0.2s,transform 0.15s;
-}
-.card:hover { border-color:#30363d; transform:translateY(-1px); }
-.card-num {
-  flex-shrink:0; width:2.2rem; height:2.2rem; border-radius:0.5rem;
-  background:rgba(64,169,255,0.08); color:#58a6ff; font-size:0.85rem; font-weight:700;
-  display:flex; align-items:center; justify-content:center;
-}
-.card-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:0.5rem; }
-.card-title { font-size:0.95rem; font-weight:600; line-height:1.45; color:#f0f6fc; }
-.card-summary { font-size:0.83rem; color:#8b949e; line-height:1.55; }
-.card-meta { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:0.45rem; }
-.source-chip {
-  display:inline-flex; align-items:center;
-  padding:0.18rem 0.6rem; border-radius:0.35rem;
-  font-size:0.75rem; font-weight:600;
-  color:var(--chip-color,#8b949e);
-  background:color-mix(in srgb,var(--chip-color,#8b949e) 12%,transparent);
-  border:1px solid color-mix(in srgb,var(--chip-color,#8b949e) 20%,transparent);
-}
-.card-link {
-  font-size:0.8rem; color:#58a6ff; text-decoration:none; white-space:nowrap;
-  transition:color 0.15s;
-}
-.card-link:hover { color:#79c0ff; text-decoration:underline; }
-
-/* ── Footer ── */
-.footer {
-  text-align:center; padding:2.5rem 1.5rem 3rem; border-top:1px solid #21262d;
-  color:#8b949e; font-size:0.85rem; line-height:1.8;
-}
-.footer a { color:#58a6ff; text-decoration:none; }
-.footer a:hover { text-decoration:underline; }
-.footer strong { color:#c9d1d9; }
-
-/* ── Responsive ── */
-@media (max-width:768px) {
-  .hero h1 { font-size:1.6rem; }
-  .card-grid { grid-template-columns:1fr; }
-  .stats-row { gap:0.6rem; }
-  .stat { min-width:80px; padding:0.5rem 0.8rem; }
-}
-@media (max-width:480px) {
-  .hero { padding:2rem 1rem; }
-  .hero h1 { font-size:1.35rem; }
-  .main { padding:1rem 0.75rem; }
-  .card { padding:1rem; }
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;min-height:100vh;}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(64,169,255,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(168,85,247,0.08) 0%,transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;}
+.hero-badge{display:inline-block;padding:0.3rem 1rem;border-radius:2rem;background:rgba(64,169,255,0.15);color:#58a6ff;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.35rem;color:#f0f6fc;}
+.hero-date{font-size:1rem;color:#8b949e;margin-bottom:1.25rem;}
+.hero-total{display:inline-flex;align-items:center;gap:0.4rem;font-size:1.1rem;color:#58a6ff;margin-bottom:1.5rem;}
+.hero-total strong{font-size:2rem;font-weight:800;}
+.stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:0.5rem;}
+.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0.75rem;padding:0.6rem 1.1rem;min-width:100px;text-align:center;}
+.stat-num{display:block;font-size:1.4rem;font-weight:700;color:#f0f6fc;}
+.stat-label{display:block;font-size:0.75rem;color:#8b949e;margin-top:0.15rem;}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.75rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;}
+.nav-chip{display:inline-flex;align-items:center;gap:0.35rem;padding:0.4rem 0.85rem;border-radius:2rem;font-size:0.85rem;text-decoration:none;color:#c9d1d9;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.2s;}
+.nav-chip:hover{background:rgba(64,169,255,0.12);border-color:rgba(64,169,255,0.3);color:#58a6ff;}
+.nav-badge{display:inline-flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;border-radius:50%;background:rgba(64,169,255,0.2);font-size:0.7rem;font-weight:700;color:#58a6ff;}
+.main{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;}
+.section{margin-bottom:3rem;}
+.section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;color:#f0f6fc;display:flex;align-items:center;gap:0.5rem;}
+.section-count{font-size:0.8rem;font-weight:400;color:#8b949e;margin-left:0.4rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;}
+.card{background:#161b22;border:1px solid #21262d;border-radius:0.75rem;padding:1.25rem;display:flex;gap:0.9rem;transition:border-color 0.2s,transform 0.15s;}
+.card:hover{border-color:#30363d;transform:translateY(-1px);}
+.card-num{flex-shrink:0;width:2.2rem;height:2.2rem;border-radius:0.5rem;background:rgba(64,169,255,0.08);color:#58a6ff;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;}
+.card-title{font-size:0.95rem;font-weight:600;line-height:1.45;color:#f0f6fc;}
+.card-summary{font-size:0.83rem;color:#8b949e;line-height:1.55;}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:0.45rem;}
+.source-chip{display:inline-flex;align-items:center;padding:0.18rem 0.6rem;border-radius:0.35rem;font-size:0.75rem;font-weight:600;color:var(--chip-color,#8b949e);background:color-mix(in srgb,var(--chip-color,#8b949e) 12%,transparent);border:1px solid color-mix(in srgb,var(--chip-color,#8b949e) 20%,transparent);}
+.card-link{font-size:0.8rem;color:#58a6ff;text-decoration:none;white-space:nowrap;transition:color 0.15s;}
+.card-link:hover{color:#79c0ff;text-decoration:underline;}
+.footer{text-align:center;padding:2.5rem 1.5rem 3rem;border-top:1px solid #21262d;color:#8b949e;font-size:0.85rem;line-height:1.8;}
+.footer a{color:#58a6ff;text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer strong{color:#c9d1d9;}
+@media(max-width:768px){.hero h1{font-size:1.6rem;}.card-grid{grid-template-columns:1fr;}.stats-row{gap:0.6rem;}.stat{min-width:80px;padding:0.5rem 0.8rem;}}
+@media(max-width:480px){.hero{padding:2rem 1rem;}.hero h1{font-size:1.35rem;}.main{padding:1rem 0.75rem;}.card{padding:1rem;}}
 </style>
 </head>
 <body>
-
-<!-- ═══ Hero ═══ -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-badge">AI HOT DAILY</div>
     <h1>AI 晨报仪表盘</h1>
-    <div class="hero-date">2026-06-24 星期三 &nbsp;·&nbsp; 北京时间</div>
+    <div class="hero-date">2026-06-24 星期三 · 北京时间</div>
     <div class="hero-total">共 <strong>26</strong> 条精选资讯</div>
-    <div class="stats-row">
-      <div class="stat"><span class="stat-num">7</span><span class="stat-label">模型发布/更新</span></div><div class="stat"><span class="stat-num">6</span><span class="stat-label">产品发布/更新</span></div><div class="stat"><span class="stat-num">5</span><span class="stat-label">行业动态</span></div><div class="stat"><span class="stat-num">3</span><span class="stat-label">论文研究</span></div><div class="stat"><span class="stat-num">5</span><span class="stat-label">技巧与观点</span></div>
-    </div>
+    <div class="stats-row"><div class="stat"><span class="stat-num">7</span><span class="stat-label">模型发布/更新</span></div><div class="stat"><span class="stat-num">6</span><span class="stat-label">产品发布/更新</span></div><div class="stat"><span class="stat-num">5</span><span class="stat-label">行业动态</span></div><div class="stat"><span class="stat-num">3</span><span class="stat-label">论文研究</span></div><div class="stat"><span class="stat-num">5</span><span class="stat-label">技巧与观点</span></div></div>
   </div>
 </header>
-
-<!-- ═══ Navigation ═══ -->
 <nav class="nav-bar" id="nav">
-  <a href="#sec-0" class="nav-chip">🧠 模型发布/更新<span class="nav-badge">7</span></a>
+<a href="#sec-0" class="nav-chip">🧠 模型发布/更新<span class="nav-badge">7</span></a>
 <a href="#sec-1" class="nav-chip">🚀 产品发布/更新<span class="nav-badge">6</span></a>
 <a href="#sec-2" class="nav-chip">📡 行业动态<span class="nav-badge">5</span></a>
 <a href="#sec-3" class="nav-chip">📄 论文研究<span class="nav-badge">3</span></a>
 <a href="#sec-4" class="nav-chip">💡 技巧与观点<span class="nav-badge">5</span></a>
-
 </nav>
-
-<!-- ═══ Main Content ═══ -->
 <main class="main">
 <section id="sec-0" class="section">
 <h2 class="section-title">🧠 模型发布/更新<span class="section-count">7 条</span></h2>
@@ -478,36 +376,30 @@ body {
       </article>
     </div>
 </section>
-
 </main>
-
-<!-- ═══ Footer ═══ -->
 <footer class="footer">
   <p>共收录 <strong>26</strong> 条 AI 资讯，按五版块分类</p>
   <p>数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer">AI HOT</a> · 日报窗口 2026-06-23 08:00 ~ 2026-06-24 08:00（北京时间）</p>
   <p style="margin-top:0.5rem;font-size:0.75rem;">Generated by haciii 的牛马打工人</p>
 </footer>
-
 <script>
-// Highlight current section in nav on scroll
-(function() {
-  var chips = document.querySelectorAll('.nav-chip');
-  var sections = document.querySelectorAll('.section');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        chips.forEach(function(c) {
-          var isActive = c.getAttribute('href') === '#' + entry.target.id;
-          c.style.background = isActive ? 'rgba(64,169,255,0.12)' : 'rgba(255,255,255,0.04)';
-          c.style.borderColor = isActive ? 'rgba(64,169,255,0.3)' : 'rgba(255,255,255,0.08)';
-          c.style.color = isActive ? '#58a6ff' : '#c9d1d9';
+(function(){
+  var chips=document.querySelectorAll('.nav-chip');
+  var sections=document.querySelectorAll('.section');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        chips.forEach(function(c){
+          var isActive=c.getAttribute('href')==='#'+e.target.id;
+          c.style.background=isActive?'rgba(64,169,255,0.12)':'rgba(255,255,255,0.04)';
+          c.style.borderColor=isActive?'rgba(64,169,255,0.3)':'rgba(255,255,255,0.08)';
+          c.style.color=isActive?'#58a6ff':'#c9d1d9';
         });
       }
     });
-  }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
-  sections.forEach(function(s) { observer.observe(s); });
+  },{threshold:0.3,rootMargin:'-80px 0px 0px 0px'});
+  sections.forEach(function(s){observer.observe(s);});
 })();
 </script>
-
 </body>
 </html>
