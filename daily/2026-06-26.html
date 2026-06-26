@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 日报 — 2026-06-26</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;min-height:100vh;}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(64,169,255,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(168,85,247,0.08) 0%,transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;}
+.hero-badge{display:inline-block;padding:0.3rem 1rem;border-radius:2rem;background:rgba(64,169,255,0.15);color:#58a6ff;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.35rem;color:#f0f6fc;}
+.hero-date{font-size:1rem;color:#8b949e;margin-bottom:1.25rem;}
+.hero-total{display:inline-flex;align-items:center;gap:0.4rem;font-size:1.1rem;color:#58a6ff;margin-bottom:1.5rem;}
+.hero-total strong{font-size:2rem;font-weight:800;}
+.stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:0.5rem;}
+.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0.75rem;padding:0.6rem 1.1rem;min-width:100px;text-align:center;}
+.stat-num{display:block;font-size:1.4rem;font-weight:700;color:#f0f6fc;}
+.stat-label{display:block;font-size:0.75rem;color:#8b949e;margin-top:0.15rem;}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.75rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;}
+.nav-chip{display:inline-flex;align-items:center;gap:0.35rem;padding:0.4rem 0.85rem;border-radius:2rem;font-size:0.85rem;text-decoration:none;color:#c9d1d9;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.2s;}
+.nav-chip:hover{background:rgba(64,169,255,0.12);border-color:rgba(64,169,255,0.3);color:#58a6ff;}
+.nav-badge{display:inline-flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;border-radius:50%;background:rgba(64,169,255,0.2);font-size:0.7rem;font-weight:700;color:#58a6ff;}
+.main{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;}
+.section{margin-bottom:3rem;}
+.section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;color:#f0f6fc;display:flex;align-items:center;gap:0.5rem;}
+.section-count{font-size:0.8rem;font-weight:400;color:#8b949e;margin-left:0.4rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;}
+.card{background:#161b22;border:1px solid #21262d;border-radius:0.75rem;padding:1.25rem;display:flex;gap:0.9rem;transition:border-color 0.2s,transform 0.15s;}
+.card:hover{border-color:#30363d;transform:translateY(-1px);}
+.card-num{flex-shrink:0;width:2.2rem;height:2.2rem;border-radius:0.5rem;background:rgba(64,169,255,0.08);color:#58a6ff;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;}
+.card-title{font-size:0.95rem;font-weight:600;line-height:1.45;color:#f0f6fc;}
+.card-summary{font-size:0.83rem;color:#8b949e;line-height:1.55;}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:0.45rem;}
+.source-chip{display:inline-flex;align-items:center;padding:0.18rem 0.6rem;border-radius:0.35rem;font-size:0.75rem;font-weight:600;color:var(--chip-color,#8b949e);background:color-mix(in srgb,var(--chip-color,#8b949e) 12%,transparent);border:1px solid color-mix(in srgb,var(--chip-color,#8b949e) 20%,transparent);}
+.card-link{font-size:0.8rem;color:#58a6ff;text-decoration:none;white-space:nowrap;transition:color 0.15s;}
+.card-link:hover{color:#79c0ff;text-decoration:underline;}
+.footer{text-align:center;padding:2.5rem 1.5rem 3rem;border-top:1px solid #21262d;color:#8b949e;font-size:0.85rem;line-height:1.8;}
+.footer a{color:#58a6ff;text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer strong{color:#c9d1d9;}
+@media(max-width:768px){.hero h1{font-size:1.6rem;}.card-grid{grid-template-columns:1fr;}.stats-row{gap:0.6rem;}.stat{min-width:80px;padding:0.5rem 0.8rem;}}
+@media(max-width:480px){.hero{padding:2rem 1rem;}.hero h1{font-size:1.35rem;}.main{padding:1rem 0.75rem;}.card{padding:1rem;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">AI HOT DAILY</div>
+    <h1>AI 晨报仪表盘</h1>
+    <div class="hero-date">2026-06-26 星期五 · 北京时间</div>
+    <div class="hero-total">共 <strong>25</strong> 条精选资讯</div>
+    <div class="stats-row"><div class="stat"><span class="stat-num">1</span><span class="stat-label">模型发布/更新</span></div><div class="stat"><span class="stat-num">8</span><span class="stat-label">产品发布/更新</span></div><div class="stat"><span class="stat-num">5</span><span class="stat-label">行业动态</span></div><div class="stat"><span class="stat-num">4</span><span class="stat-label">论文研究</span></div><div class="stat"><span class="stat-num">7</span><span class="stat-label">技巧与观点</span></div></div>
+  </div>
+</header>
+<nav class="nav-bar" id="nav">
+<a href="#sec-0" class="nav-chip">🧠 模型发布/更新<span class="nav-badge">1</span></a>
+<a href="#sec-1" class="nav-chip">🚀 产品发布/更新<span class="nav-badge">8</span></a>
+<a href="#sec-2" class="nav-chip">📡 行业动态<span class="nav-badge">5</span></a>
+<a href="#sec-3" class="nav-chip">📄 论文研究<span class="nav-badge">4</span></a>
+<a href="#sec-4" class="nav-chip">💡 技巧与观点<span class="nav-badge">7</span></a>
+</nav>
+<main class="main">
+<section id="sec-0" class="section">
+<h2 class="section-title">🧠 模型发布/更新<span class="section-count">1 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#1</div>
+        <div class="card-body">
+          <h3 class="card-title">Ornith-1.0 开源模型家族发布，专注 Agentic Coding 全参数规模</h3>
+          <p class="card-summary">Ornith-1.0 开源模型家族发布，专注智能体编程（Agentic Coding），覆盖 9B Dense、31B…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/berryxia/status/2070167806700908957" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-1" class="section">
+<h2 class="section-title">🚀 产品发布/更新<span class="section-count">8 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#2</div>
+        <div class="card-body">
+          <h3 class="card-title">OpenRouter MCP 服务器发布</h3>
+          <p class="card-summary">OpenRouter 推出 MCP 服务器，为编程智能体提供实时模型数据、基准排名、定价和文档查询。开发者通过一键安装…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">OpenRouter</span>
+            <a href="https://openrouter.ai/blog/announcements/openrouter-mcp-server" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#3</div>
+        <div class="card-body">
+          <h3 class="card-title">Midjourney 预览 V8.2 并加速草稿模式</h3>
+          <p class="card-summary">Midjourney 带来两项更新。一是加入 `--preview` 参数可提前体验 V8.2 的美学与个性化效果；二…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/midjourney/status/2070223272072065228" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#4</div>
+        <div class="card-body">
+          <h3 class="card-title">Codex 在 ChatGPT 移动 App 正式可用</h3>
+          <p class="card-summary">OpenAI 宣布 Codex 在 ChatGPT 移动应用中正式开放（GA），并新增一对一设备配对实现更安全的手机与…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/OpenAIDevs/status/2070254532911882707" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#5</div>
+        <div class="card-body">
+          <h3 class="card-title">Runway发布Agent 2.0</h3>
+          <p class="card-summary">Runway发布Agent 2.0，帮助营销人员创建、测试和优化广告、视频及营销活动。品牌营销人员可在对话中开发活动概…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Runway</span>
+            <a href="https://runwayml.com/news/introducing-agent-2" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#6</div>
+        <div class="card-body">
+          <h3 class="card-title">Midjourney V8.1 草稿模式新增随机风格功能</h3>
+          <p class="card-summary">Midjourney V8.1 的草稿模式（draft mode）添加了随机风格功能。用户在提示词中加入 `--sre…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Midjourney</span>
+            <a href="https://updates.midjourney.com/random-styles-in-draft-mode" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#7</div>
+        <div class="card-body">
+          <h3 class="card-title">Claude Code v2.1.193 发布</h3>
+          <p class="card-summary">Claude Code v2.1.193 新增 `autoMode.classifyAllShell` 设置，将全部 …</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#6e7681">Claude Code</span>
+            <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.193" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#8</div>
+        <div class="card-body">
+          <h3 class="card-title">Google Finance 全新 Android 应用与投资组合功能上线</h3>
+          <p class="card-summary">本周，Google Finance 推出正式版 Android 应用，同步上线全球投资组合跟踪功能。用户可通过截图、C…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Google Blog</span>
+            <a href="https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#9</div>
+        <div class="card-body">
+          <h3 class="card-title">盈透证券（Interactive Brokers）与 Grok 集成：组合分析、情景建模与实时交易指令生成</h3>
+          <p class="card-summary">盈透证券（Interactive Brokers）近日与 Grok 集成，用户可在几分钟内免费关联现有账户，无需注册新…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">xAI</span>
+            <a href="https://x.ai/news/grok-interactive-brokers" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-2" class="section">
+<h2 class="section-title">📡 行业动态<span class="section-count">5 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#10</div>
+        <div class="card-body">
+          <h3 class="card-title">美国政府要求OpenAI暂缓GPT-5.6广泛发布</h3>
+          <p class="card-summary">The Information 报道，美国政府因安全顾虑要求 OpenAI 暂缓 GPT-5.6 的广泛发布，改为推出…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/rohanpaul_ai/status/2070252433109049466" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#11</div>
+        <div class="card-body">
+          <h3 class="card-title">Anthropic称阿里巴巴非法获取了Claude AI模型的功能</h3>
+          <p class="card-summary">Anthropic指控阿里巴巴未经授权提取了其Claude AI模型的能力。该指控基于Anthropic的调查，认为阿…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#12</div>
+        <div class="card-body">
+          <h3 class="card-title">Meta员工警告AI内容审核部署过快</h3>
+          <p class="card-summary">Meta在2025年已用大语言模型替换约一半人工审核请求，计划年底前将部分内容类型的AI审核比例提升至90%以上，每年…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">The Decoder</span>
+            <a href="https://the-decoder.com/meta-employees-warn-ai-moderation-rollout-is-too-fast" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#13</div>
+        <div class="card-body">
+          <h3 class="card-title">General Intuition 完成 3.2 亿美元融资，用游戏数据训练通用 AI 智能体</h3>
+          <p class="card-summary">General Intuition 以 23 亿美元估值完成 3.2 亿美元融资，累计披露融资 4.54 亿美元。公司…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">TechCrunch</span>
+            <a href="https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#14</div>
+        <div class="card-body">
+          <h3 class="card-title">Suno 推出 Spark：支持下一代独立艺术家</h3>
+          <p class="card-summary">Suno 宣布启动 **Spark** 孵化器项目，面向年满18岁的未签约独立歌手、词曲作者和制作人。入选者将获得创作…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Suno</span>
+            <a href="https://suno.com/blog/introducing-spark" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-3" class="section">
+<h2 class="section-title">📄 论文研究<span class="section-count">4 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#15</div>
+        <div class="card-body">
+          <h3 class="card-title">赫库兰尼姆古卷首次被完整虚拟解读</h3>
+          <p class="card-summary">研究人员利用高分辨率X射线显微断层扫描和机器学习，在未物理展开的情况下完整虚拟展开并读取了赫库兰尼姆古卷PHerc.1…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://scrollprize.org/firstscroll" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#16</div>
+        <div class="card-body">
+          <h3 class="card-title">IBM 首度推出亚纳米级芯片技术</h3>
+          <p class="card-summary">IBM 于 2026 年 6 月 25 日发布全球首款亚纳米级芯片技术，采用 0.7 nm（7 埃米）节点与全新三维纳…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#17</div>
+        <div class="card-body">
+          <h3 class="card-title">OpenAI内部报告：智能体Codex如何改变工作</h3>
+          <p class="card-summary">OpenAI 在2025年8月至2026年6月间观察到，智能体产品 Codex 取代 ChatGPT 成为主要工作工具…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">OpenAI</span>
+            <a href="https://openai.com/index/how-agents-are-transforming-work" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#18</div>
+        <div class="card-body">
+          <h3 class="card-title">用线性弹性缓存优化云经济</h3>
+          <p class="card-summary">Google Research 与 Google Cloud 提出线性弹性缓存，将缓存管理转为线性成本优化问题，动态调…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Google Research</span>
+            <a href="https://research.google/blog/optimizing-cloud-economics-with-linear-elastic-caching" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-4" class="section">
+<h2 class="section-title">💡 技巧与观点<span class="section-count">7 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#19</div>
+        <div class="card-body">
+          <h3 class="card-title">@exponentialview 发布《State of the AI Economy》报告：AI经济年化收入超1750亿美元</h3>
+          <p class="card-summary">报告基于去重后的消费端AI支出统计，过去12个月实际AI营收达1100亿美元，年化运行率超1750亿美元，增长速度约为…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/rohanpaul_ai/status/2070288396644491317" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#20</div>
+        <div class="card-body">
+          <h3 class="card-title">多数主流AI聊天机器人政治立场偏左，“反觉醒”模型也不例外</h3>
+          <p class="card-summary">华盛顿邮报调查显示，多数主流AI聊天机器人在政治问题上明显偏左。OpenAI GPT-5.5在80%回答中仅呈现左派论…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">The Decoder</span>
+            <a href="https://the-decoder.com/most-major-ai-chatbots-still-lean-left-on-political-questions-even-anti-woke-models-are-no-exception" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#21</div>
+        <div class="card-body">
+          <h3 class="card-title">OLMo Hybrid vs Transformer：混合模型在实义词上优势明显，但重复短语上几无优势</h3>
+          <p class="card-summary">通过对比7B参数的OLMo 3（Transformer）与OLMo Hybrid（混合架构），实验发现混合模型在大多数…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF9D00">Hugging Face</span>
+            <a href="https://huggingface.co/blog/allenai/hybrid-token-prediction" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#22</div>
+        <div class="card-body">
+          <h3 class="card-title">Meta 隐私感知基础设施的资产分类：混合模式将 LLM 蒸馏为确定性规则</h3>
+          <p class="card-summary">Meta 在 Privacy-Aware Infrastructure (PAI) 的资产分类中采用混合模式：先构建含…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Meta</span>
+            <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#23</div>
+        <div class="card-body">
+          <h3 class="card-title">跨模型与任务的 GitHub Copilot agentic harness 性能与效率评估</h3>
+          <p class="card-summary">GitHub Copilot agentic harness 在多个基准测试中表现强劲，同时具备领先的 token 效…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#6e7681">GitHub Blog</span>
+            <a href="https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#24</div>
+        <div class="card-body">
+          <h3 class="card-title">Sail Research 构建集群感知编排，加速异步推理</h3>
+          <p class="card-summary">推理市场是软件中最大的市场。AI工作负载正从同步聊天转向异步、多轮智能体，运行时长可达数小时。Sail Researc…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Tomer Tunguz 博客（VC 分析）</span>
+            <a href="https://www.tomtunguz.com/sail-inference-queue" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#25</div>
+        <div class="card-body">
+          <h3 class="card-title">Generative AI Fizzle™：生成式AI泡沫正在缓慢消退</h3>
+          <p class="card-summary">Gary Marcus 昨日提出新术语 Generative AI Fizzle™，认为生成式AI行业估值过高，投资者…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Gary Marcus</span>
+            <a href="https://garymarcus.substack.com/p/the-generative-ai-fizzle" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+</main>
+<footer class="footer">
+  <p>共收录 <strong>25</strong> 条 AI 资讯，按五版块分类</p>
+  <p>数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer">AI HOT</a> · 日报窗口 2026-06-25 08:00 ~ 2026-06-26 08:00（北京时间）</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">Generated by haciii 的牛马打工人</p>
+</footer>
+<script>
+(function(){
+  var chips=document.querySelectorAll('.nav-chip');
+  var sections=document.querySelectorAll('.section');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        chips.forEach(function(c){
+          var isActive=c.getAttribute('href')==='#'+e.target.id;
+          c.style.background=isActive?'rgba(64,169,255,0.12)':'rgba(255,255,255,0.04)';
+          c.style.borderColor=isActive?'rgba(64,169,255,0.3)':'rgba(255,255,255,0.08)';
+          c.style.color=isActive?'#58a6ff':'#c9d1d9';
+        });
+      }
+    });
+  },{threshold:0.3,rootMargin:'-80px 0px 0px 0px'});
+  sections.forEach(function(s){observer.observe(s);});
+})();
+</script>
+</body>
+</html>
