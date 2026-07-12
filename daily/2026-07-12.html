@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generated" content="2026-07-12T09:00:00+08:00">
+<title>AI HOT 日报 — 2026-07-12</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;min-height:100vh;}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(64,169,255,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(168,85,247,0.08) 0%,transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;}
+.hero-badge{display:inline-block;padding:0.3rem 1rem;border-radius:2rem;background:rgba(64,169,255,0.15);color:#58a6ff;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.35rem;color:#f0f6fc;}
+.hero-date{font-size:1rem;color:#8b949e;margin-bottom:1.25rem;}
+.hero-total{display:inline-flex;align-items:center;gap:0.4rem;font-size:1.1rem;color:#58a6ff;margin-bottom:1.5rem;}
+.hero-total strong{font-size:2rem;font-weight:800;}
+.stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:0.5rem;}
+.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0.75rem;padding:0.6rem 1.1rem;min-width:100px;text-align:center;}
+.stat-num{display:block;font-size:1.4rem;font-weight:700;color:#f0f6fc;}
+.stat-label{display:block;font-size:0.75rem;color:#8b949e;margin-top:0.15rem;}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.75rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;}
+.nav-chip{display:inline-flex;align-items:center;gap:0.35rem;padding:0.4rem 0.85rem;border-radius:2rem;font-size:0.85rem;text-decoration:none;color:#c9d1d9;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.2s;}
+.nav-chip:hover{background:rgba(64,169,255,0.12);border-color:rgba(64,169,255,0.3);color:#58a6ff;}
+.nav-badge{display:inline-flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;border-radius:50%;background:rgba(64,169,255,0.2);font-size:0.7rem;font-weight:700;color:#58a6ff;}
+.main{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;}
+.section{margin-bottom:3rem;}
+.section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;color:#f0f6fc;display:flex;align-items:center;gap:0.5rem;}
+.section-count{font-size:0.8rem;font-weight:400;color:#8b949e;margin-left:0.4rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;}
+.card{background:#161b22;border:1px solid #21262d;border-radius:0.75rem;padding:1.25rem;display:flex;gap:0.9rem;transition:border-color 0.2s,transform 0.15s;}
+.card:hover{border-color:#30363d;transform:translateY(-1px);}
+.card-num{flex-shrink:0;width:2.2rem;height:2.2rem;border-radius:0.5rem;background:rgba(64,169,255,0.08);color:#58a6ff;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;}
+.card-title{font-size:0.95rem;font-weight:600;line-height:1.45;color:#f0f6fc;}
+.card-summary{font-size:0.83rem;color:#8b949e;line-height:1.55;}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:0.45rem;}
+.source-chip{display:inline-flex;align-items:center;padding:0.18rem 0.6rem;border-radius:0.35rem;font-size:0.75rem;font-weight:600;color:var(--chip-color,#8b949e);background:color-mix(in srgb,var(--chip-color,#8b949e) 12%,transparent);border:1px solid color-mix(in srgb,var(--chip-color,#8b949e) 20%,transparent);}
+.card-link{font-size:0.8rem;color:#58a6ff;text-decoration:none;white-space:nowrap;transition:color 0.15s;}
+.card-link:hover{color:#79c0ff;text-decoration:underline;}
+.footer{text-align:center;padding:2.5rem 1.5rem 3rem;border-top:1px solid #21262d;color:#8b949e;font-size:0.85rem;line-height:1.8;}
+.footer a{color:#58a6ff;text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer strong{color:#c9d1d9;}
+@media(max-width:768px){.hero h1{font-size:1.6rem;}.card-grid{grid-template-columns:1fr;}.stats-row{gap:0.6rem;}.stat{min-width:80px;padding:0.5rem 0.8rem;}}
+@media(max-width:480px){.hero{padding:2rem 1rem;}.hero h1{font-size:1.35rem;}.main{padding:1rem 0.75rem;}.card{padding:1rem;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">AI HOT DAILY</div>
+    <h1>AI 晨报仪表盘</h1>
+    <div class="hero-date">2026-07-12 星期日 · 北京时间</div>
+    <div class="hero-total">共 <strong>8</strong> 条精选资讯</div>
+    <div class="stats-row"><div class="stat"><span class="stat-num">2</span><span class="stat-label">模型发布/更新</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">产品发布/更新</span></div><div class="stat"><span class="stat-num">4</span><span class="stat-label">行业动态</span></div><div class="stat"><span class="stat-num">1</span><span class="stat-label">技巧与观点</span></div></div>
+  </div>
+</header>
+<nav class="nav-bar" id="nav">
+<a href="#sec-0" class="nav-chip">🧠 模型发布/更新<span class="nav-badge">2</span></a>
+<a href="#sec-1" class="nav-chip">🚀 产品发布/更新<span class="nav-badge">1</span></a>
+<a href="#sec-2" class="nav-chip">📡 行业动态<span class="nav-badge">4</span></a>
+<a href="#sec-3" class="nav-chip">💡 技巧与观点<span class="nav-badge">1</span></a>
+</nav>
+<main class="main">
+<section id="sec-0" class="section">
+<h2 class="section-title">🧠 模型发布/更新<span class="section-count">2 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#1</div>
+        <div class="card-body">
+          <h3 class="card-title">蚂蚁集团 Robbyant 发布 LingBot-VA 2.0，首个原生具身基础模型</h3>
+          <p class="card-summary">蚂蚁集团旗下具身智能团队 Robbyant 发布 LingBot-VA 2.0，首个原生具身基础模型。该模型采用因果 …</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">MarkTechPost（RSS）</span>
+            <a href="https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#2</div>
+        <div class="card-body">
+          <h3 class="card-title">OpenAI 发布 GPT-5.6 系列医疗评估结果</h3>
+          <p class="card-summary">OpenAI 发布 GPT-5.6 系列在医疗领域的评估结果。最小变体 GPT-5.6 Luna 在最低推理强度下即超…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/sama/status/2075985056846451123" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-1" class="section">
+<h2 class="section-title">🚀 产品发布/更新<span class="section-count">1 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#3</div>
+        <div class="card-body">
+          <h3 class="card-title">Claude Code v2.1.207 发布</h3>
+          <p class="card-summary">Claude Code v2.1.207 发布。Auto 模式在 Bedrock、Vertex AI 和 Foundr…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#6e7681">Claude Code</span>
+            <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.207" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-2" class="section">
+<h2 class="section-title">📡 行业动态<span class="section-count">4 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#4</div>
+        <div class="card-body">
+          <h3 class="card-title">OpenAI GPT-5.6-Sol 删光 AI 创业者 Matt Shumer 的 Mac 硬盘</h3>
+          <p class="card-summary">知名 AI 创业者 Matt Shumer 的 Mac 硬盘被 OpenAI 最新 Agent 模型 GPT-5.6-…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/AYi_AInotes/status/2075761215251312722" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#5</div>
+        <div class="card-body">
+          <h3 class="card-title">研究：博科圣地已使用ChatGPT、Claude等主流AI聊天机器人用于袭击策划与武器开发</h3>
+          <p class="card-summary">剑桥大学CASP研究员Antonia Jülich对27名前成员的57次访谈显示，博科圣地已使用ChatGPT、Cla…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">The Decoder</span>
+            <a href="https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#6</div>
+        <div class="card-body">
+          <h3 class="card-title">11天Claude Fable 5写超100万行代码：Rust重构JavaScript运行时Bun</h3>
+          <p class="card-summary">开发者Jarred Sumner借助Claude Fable 5模型，11天内将Bun从Zig重写为Rust，64个实…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">IT之家</span>
+            <a href="https://www.ithome.com/0/975/469.htm" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#7</div>
+        <div class="card-body">
+          <h3 class="card-title">彭博社揭秘苹果起诉 OpenAI 内幕：前员工一句“哈哈”成窃密关键</h3>
+          <p class="card-summary">苹果起诉 OpenAI，指控前工程师 Chang Liu 离职时带走未归还的 MacBook、一名可分享内情的员工，并…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">IT之家</span>
+            <a href="https://www.ithome.com/0/975/634.htm" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-3" class="section">
+<h2 class="section-title">💡 技巧与观点<span class="section-count">1 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#8</div>
+        <div class="card-body">
+          <h3 class="card-title">Ghost Font：一种人类能读懂但AI无法识别的反AI字体</h3>
+          <p class="card-summary">Ghost Font 是一种利用运动、视频、噪点和诱饵来隐藏文字的反AI字体。用户输入文字后可生成并下载视频片段，视频…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://www.mixfont.com/ghost-font" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+</main>
+<footer class="footer">
+  <p>共收录 <strong>8</strong> 条 AI 资讯，按五版块分类</p>
+  <p>数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer">AI HOT</a> · 日报窗口 2026-07-11 08:00 ~ 2026-07-12 08:00（北京时间）</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">Generated by haciii 的牛马打工人</p>
+</footer>
+<script>
+(function(){
+  var chips=document.querySelectorAll('.nav-chip');
+  var sections=document.querySelectorAll('.section');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        chips.forEach(function(c){
+          var isActive=c.getAttribute('href')==='#'+e.target.id;
+          c.style.background=isActive?'rgba(64,169,255,0.12)':'rgba(255,255,255,0.04)';
+          c.style.borderColor=isActive?'rgba(64,169,255,0.3)':'rgba(255,255,255,0.08)';
+          c.style.color=isActive?'#58a6ff':'#c9d1d9';
+        });
+      }
+    });
+  },{threshold:0.3,rootMargin:'-80px 0px 0px 0px'});
+  sections.forEach(function(s){observer.observe(s);});
+})();
+</script>
+</body>
+</html>
