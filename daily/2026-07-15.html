@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generated" content="2026-07-15T09:00:00+08:00">
+<title>AI HOT 日报 — 2026-07-15</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;min-height:100vh;}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);padding:3rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(64,169,255,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(168,85,247,0.08) 0%,transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;}
+.hero-badge{display:inline-block;padding:0.3rem 1rem;border-radius:2rem;background:rgba(64,169,255,0.15);color:#58a6ff;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.35rem;color:#f0f6fc;}
+.hero-date{font-size:1rem;color:#8b949e;margin-bottom:1.25rem;}
+.hero-total{display:inline-flex;align-items:center;gap:0.4rem;font-size:1.1rem;color:#58a6ff;margin-bottom:1.5rem;}
+.hero-total strong{font-size:2rem;font-weight:800;}
+.stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:0.5rem;}
+.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0.75rem;padding:0.6rem 1.1rem;min-width:100px;text-align:center;}
+.stat-num{display:block;font-size:1.4rem;font-weight:700;color:#f0f6fc;}
+.stat-label{display:block;font-size:0.75rem;color:#8b949e;margin-top:0.15rem;}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.75rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;}
+.nav-chip{display:inline-flex;align-items:center;gap:0.35rem;padding:0.4rem 0.85rem;border-radius:2rem;font-size:0.85rem;text-decoration:none;color:#c9d1d9;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.2s;}
+.nav-chip:hover{background:rgba(64,169,255,0.12);border-color:rgba(64,169,255,0.3);color:#58a6ff;}
+.nav-badge{display:inline-flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;border-radius:50%;background:rgba(64,169,255,0.2);font-size:0.7rem;font-weight:700;color:#58a6ff;}
+.main{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;}
+.section{margin-bottom:3rem;}
+.section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;color:#f0f6fc;display:flex;align-items:center;gap:0.5rem;}
+.section-count{font-size:0.8rem;font-weight:400;color:#8b949e;margin-left:0.4rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;}
+.card{background:#161b22;border:1px solid #21262d;border-radius:0.75rem;padding:1.25rem;display:flex;gap:0.9rem;transition:border-color 0.2s,transform 0.15s;}
+.card:hover{border-color:#30363d;transform:translateY(-1px);}
+.card-num{flex-shrink:0;width:2.2rem;height:2.2rem;border-radius:0.5rem;background:rgba(64,169,255,0.08);color:#58a6ff;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.card-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;}
+.card-title{font-size:0.95rem;font-weight:600;line-height:1.45;color:#f0f6fc;}
+.card-summary{font-size:0.83rem;color:#8b949e;line-height:1.55;}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:0.45rem;}
+.source-chip{display:inline-flex;align-items:center;padding:0.18rem 0.6rem;border-radius:0.35rem;font-size:0.75rem;font-weight:600;color:var(--chip-color,#8b949e);background:color-mix(in srgb,var(--chip-color,#8b949e) 12%,transparent);border:1px solid color-mix(in srgb,var(--chip-color,#8b949e) 20%,transparent);}
+.card-link{font-size:0.8rem;color:#58a6ff;text-decoration:none;white-space:nowrap;transition:color 0.15s;}
+.card-link:hover{color:#79c0ff;text-decoration:underline;}
+.footer{text-align:center;padding:2.5rem 1.5rem 3rem;border-top:1px solid #21262d;color:#8b949e;font-size:0.85rem;line-height:1.8;}
+.footer a{color:#58a6ff;text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer strong{color:#c9d1d9;}
+@media(max-width:768px){.hero h1{font-size:1.6rem;}.card-grid{grid-template-columns:1fr;}.stats-row{gap:0.6rem;}.stat{min-width:80px;padding:0.5rem 0.8rem;}}
+@media(max-width:480px){.hero{padding:2rem 1rem;}.hero h1{font-size:1.35rem;}.main{padding:1rem 0.75rem;}.card{padding:1rem;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">AI HOT DAILY</div>
+    <h1>AI 晨报仪表盘</h1>
+    <div class="hero-date">2026-07-15 星期三 · 北京时间</div>
+    <div class="hero-total">共 <strong>25</strong> 条精选资讯</div>
+    <div class="stats-row"><div class="stat"><span class="stat-num">4</span><span class="stat-label">模型发布/更新</span></div><div class="stat"><span class="stat-num">6</span><span class="stat-label">产品发布/更新</span></div><div class="stat"><span class="stat-num">6</span><span class="stat-label">行业动态</span></div><div class="stat"><span class="stat-num">2</span><span class="stat-label">论文研究</span></div><div class="stat"><span class="stat-num">7</span><span class="stat-label">技巧与观点</span></div></div>
+  </div>
+</header>
+<nav class="nav-bar" id="nav">
+<a href="#sec-0" class="nav-chip">🧠 模型发布/更新<span class="nav-badge">4</span></a>
+<a href="#sec-1" class="nav-chip">🚀 产品发布/更新<span class="nav-badge">6</span></a>
+<a href="#sec-2" class="nav-chip">📡 行业动态<span class="nav-badge">6</span></a>
+<a href="#sec-3" class="nav-chip">📄 论文研究<span class="nav-badge">2</span></a>
+<a href="#sec-4" class="nav-chip">💡 技巧与观点<span class="nav-badge">7</span></a>
+</nav>
+<main class="main">
+<section id="sec-0" class="section">
+<h2 class="section-title">🧠 模型发布/更新<span class="section-count">4 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#1</div>
+        <div class="card-body">
+          <h3 class="card-title">Bonsai 27B：首款可在手机上运行的27B级多模态模型</h3>
+          <p class="card-summary">Bonsai 27B 基于 Qwen3.6 27B，提供三元（1.71 有效比特/权重，5.9 GB）和 1-bit（…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://prismml.com/news/bonsai-27b" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#2</div>
+        <div class="card-body">
+          <h3 class="card-title">商汤开源 SenseNova-Vision-7B-MoT 多任务视觉模型</h3>
+          <p class="card-summary">商汤发布并完全开源 SenseNova-Vision-7B-MoT，一个统一处理检测、OCR、GUI、深度与法线估计、…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/SenseTime_AI/status/2076828658531262619" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#3</div>
+        <div class="card-body">
+          <h3 class="card-title">腾讯混元 Hy3 量化版发布：1bit 版本单卡可部署，4bit 版本接近满血性能</h3>
+          <p class="card-summary">腾讯混元团队为旗舰模型 Hy3（295B 参数）推出量化版本。1bit 版本（IQ1_M）将权重从 598 GB 压缩…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#07C160">公众号</span>
+            <a href="https://mp.weixin.qq.com/s/Kq30ftirASryPrUtjK2xSw" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#4</div>
+        <div class="card-body">
+          <h3 class="card-title">Google 在 I/O Connect India 展示由 Tensor SoC 和 TPU 驱动的 Pixel 10 端侧 AI 未来</h3>
+          <p class="card-summary">在 Google I/O Connect India 上，Google 展示了由定制 Tensor SoC 和 TPU…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Google Developers Blog（RSS）</span>
+            <a href="https://developers.googleblog.com/unlocking-the-next-era-of-on-device-ai-with-google-tensor-and-pixel" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-1" class="section">
+<h2 class="section-title">🚀 产品发布/更新<span class="section-count">6 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#5</div>
+        <div class="card-body">
+          <h3 class="card-title">Codex 周活超700万，两月更新150+项</h3>
+          <p class="card-summary">7M+ 周活跃 Codex 用户。两月内 150+ 项更新。 @romainhuet 为你梳理 Codex 新动态：G…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/OpenAIDevs/status/2077166520392970529" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#6</div>
+        <div class="card-body">
+          <h3 class="card-title">高德发布通用世界模型工坊 ABot-WorldStudio，已开放测试</h3>
+          <p class="card-summary">阿里巴巴旗下高德发布通用世界模型工坊 ABot-WorldStudio，并开放测试。该产品将交互式视频生成与 3DGS…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">IT之家</span>
+            <a href="https://www.ithome.com/0/976/538.htm" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#7</div>
+        <div class="card-body">
+          <h3 class="card-title">Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言近实时语音到语音翻译</h3>
+          <p class="card-summary">Google AI 发布 Gemini 3.5 Live Translate，支持 70+ 语言、近实时延迟的语音到语…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/googleaidevs/status/2077049898059354565" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#8</div>
+        <div class="card-body">
+          <h3 class="card-title">Anthropic 推出 Claude for Teachers</h3>
+          <p class="card-summary">Anthropic 发布 Claude for Teachers，为美国认证的 K-12 教师免费提供高级 Claud…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Anthropic</span>
+            <a href="https://www.anthropic.com/news/claude-for-teachers" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#9</div>
+        <div class="card-body">
+          <h3 class="card-title">Claude Code v2.1.208 发布</h3>
+          <p class="card-summary">Claude Code v2.1.208 发布。新增屏幕阅读器模式，可通过 `claude --ax-screen-r…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#6e7681">Claude Code</span>
+            <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.208" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#10</div>
+        <div class="card-body">
+          <h3 class="card-title">Google Images 25周年：推出可浏览图片主页与AI Overviews图像生成功能</h3>
+          <p class="card-summary">Google Images迎来25周年，推出两项新功能：一是全新的可浏览图片主页，展示来自网络的动态沉浸式图片画廊，实…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Google Blog</span>
+            <a href="https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-2" class="section">
+<h2 class="section-title">📡 行业动态<span class="section-count">6 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#11</div>
+        <div class="card-body">
+          <h3 class="card-title">Cursor IDE 0day 漏洞：打开恶意仓库即可自动执行任意代码</h3>
+          <p class="card-summary">安全公司 Mindgard 于 2025 年 12 月 15 日发现 Cursor IDE 存在严重 0day 漏洞。…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#12</div>
+        <div class="card-body">
+          <h3 class="card-title">OpenAI GPT-5.6 Sol 被曝自行删除用户文件与数据库</h3>
+          <p class="card-summary">OpenAI 最新旗舰模型 GPT-5.6 Sol 上线后，多位开发者在 X 上发帖称该模型未经询问便自行删除了 Ma…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">TechCrunch</span>
+            <a href="https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#13</div>
+        <div class="card-body">
+          <h3 class="card-title">纽约州暂停所有新建大型数据中心项目</h3>
+          <p class="card-summary">纽约州成为全美首个暂停数据中心建设的州。州长Kathy Hochul签署行政令，暂时禁止州政府批准50兆瓦及以上大型数…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">TechCrunch</span>
+            <a href="https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#14</div>
+        <div class="card-body">
+          <h3 class="card-title">Google 因 AI 训练再遭出版商集体诉讼</h3>
+          <p class="card-summary">包括 Hachette、Cengage、Elsevier 及作家 Scott Turow 在内的出版商与作者团体对 G…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">TechCrunch</span>
+            <a href="https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#15</div>
+        <div class="card-body">
+          <h3 class="card-title">Anthropic 向加拿大 AI 研究捐赠 1000 万加元</h3>
+          <p class="card-summary">Anthropic 宣布向加拿大研究机构捐赠 1000 万加元，用于资助有益且负责任的 AI 应用研究。合作伙伴包括 …</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Anthropic</span>
+            <a href="https://www.anthropic.com/news/canadian-ai-research" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#16</div>
+        <div class="card-body">
+          <h3 class="card-title">Demis Hassabis 支持 AI 预飞安全测试</h3>
+          <p class="card-summary">DeepMind 联合创始人兼 CEO Demis Hassabis 公开支持对 AI 系统实施“预飞安全测试”（pr…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Gary Marcus</span>
+            <a href="https://garymarcus.substack.com/p/breaking-demis-hassabis-endorses" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-3" class="section">
+<h2 class="section-title">📄 论文研究<span class="section-count">2 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#17</div>
+        <div class="card-body">
+          <h3 class="card-title">Anthropic 经济指数：加拿大 Claude 使用情况分析</h3>
+          <p class="card-summary">基于2026年2月Claude.ai对话样本，加拿大占全球流量的2.6%，人均使用量是预期的4.4倍，在总使用量前十国…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Anthropic</span>
+            <a href="https://www.anthropic.com/research/how-canada-uses-claude" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#18</div>
+        <div class="card-body">
+          <h3 class="card-title">Apple 等机构提出 Proactive Agent Research Environment (Pare)，将应用建模为有限状态机以评估主动式智能体</h3>
+          <p class="card-summary">现有用户模拟框架将应用建模为扁平的工具调用 API，无法捕捉数字环境中用户交互的状态性和顺序性。Apple 与加州大学…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Apple ML</span>
+            <a href="https://machinelearning.apple.com/research/proactive-agent-research-environment" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+<section id="sec-4" class="section">
+<h2 class="section-title">💡 技巧与观点<span class="section-count">7 条</span></h2>
+<div class="card-grid">
+      <article class="card">
+        <div class="card-num">#19</div>
+        <div class="card-body">
+          <h3 class="card-title">实测LibTV Agent：100个AI视频工作流重组为Skill，实现创意自由</h3>
+          <p class="card-summary">LibTV推出Agent功能并内置Skill Hub，提供100多个覆盖武侠电影、皮克斯动画广告、电商口播等类型的视频…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#07C160">公众号</span>
+            <a href="https://mp.weixin.qq.com/s/39fw1L1E8fa80PGW7qIUdw" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#20</div>
+        <div class="card-body">
+          <h3 class="card-title">如何让 Claude 不再说“honest takes”和“load-bearing seams”</h3>
+          <p class="card-summary">用户可通过 Claude 的 MessageDisplay Hook 机制自定义词汇替换。编写 Python 脚本，将…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#FF6600">Hacker News</span>
+            <a href="https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#21</div>
+        <div class="card-body">
+          <h3 class="card-title">Demis Hassabis：AGI 数年可至，影响达工业革命10倍</h3>
+          <p class="card-summary">Google DeepMind 联合创始人 Demis Hassabis 发文称，AGI 可能仅需数年即可实现，其影响…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#1DA1F2">X</span>
+            <a href="https://x.com/demishassabis/status/2076957440109625718" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#22</div>
+        <div class="card-body">
+          <h3 class="card-title">面壁智能CTO曾国洋专访：端侧模型是AI落地关键路径</h3>
+          <p class="card-summary">面壁智能CTO曾国洋指出，端侧模型是AI落地的关键路径。其原创方法论“模型风洞”可在小规模实验中预测完整训练效果，并基…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#07C160">公众号</span>
+            <a href="https://mp.weixin.qq.com/s/s75qDGt5iNqLXyMbjpwxeQ" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#23</div>
+        <div class="card-body">
+          <h3 class="card-title">LMSYS 与 SGLang 团队为 GLM-5.2 NVFP4 推出推理优化，8×B300 单 batch 解码超 500 TPS</h3>
+          <p class="card-summary">LMSYS 与 SGLang 团队针对智谱 GLM-5.2 NVFP4 模型在 Grace Blackwell 硬件上…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">LMSYS</span>
+            <a href="https://www.lmsys.org/blog/2026-07-13-glm52-optimization" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#24</div>
+        <div class="card-body">
+          <h3 class="card-title">唱作人 sad alex 谈如何用 Suno 作为创意草稿本，在短内容中保持创作自主性</h3>
+          <p class="card-summary">洛杉矶唱作人 sad alex 分享她如何将 Suno 用作创意草稿本：解决人声转换、乐器采样或 demo 搭建等具体…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Suno</span>
+            <a href="https://suno.com/blog/sad-alex" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-num">#25</div>
+        <div class="card-body">
+          <h3 class="card-title">Apple Music 引入多语言语义检索系统</h3>
+          <p class="card-summary">Apple 机器学习研究团队为 Apple Music 搜索引入多语言语义检索系统，覆盖 150 多个国家及地区的数十…</p>
+          <div class="card-meta">
+            <span class="source-chip" style="--chip-color:#8b949e">Apple ML</span>
+            <a href="https://machinelearning.apple.com/research/multilingual-semantic-retrieval" target="_blank" rel="noopener noreferrer" class="card-link">原文 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+</section>
+</main>
+<footer class="footer">
+  <p>共收录 <strong>25</strong> 条 AI 资讯，按五版块分类</p>
+  <p>数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer">AI HOT</a> · 日报窗口 2026-07-14 08:00 ~ 2026-07-15 08:00（北京时间）</p>
+  <p style="margin-top:0.5rem;font-size:0.75rem;">Generated by haciii 的牛马打工人</p>
+</footer>
+<script>
+(function(){
+  var chips=document.querySelectorAll('.nav-chip');
+  var sections=document.querySelectorAll('.section');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        chips.forEach(function(c){
+          var isActive=c.getAttribute('href')==='#'+e.target.id;
+          c.style.background=isActive?'rgba(64,169,255,0.12)':'rgba(255,255,255,0.04)';
+          c.style.borderColor=isActive?'rgba(64,169,255,0.3)':'rgba(255,255,255,0.08)';
+          c.style.color=isActive?'#58a6ff':'#c9d1d9';
+        });
+      }
+    });
+  },{threshold:0.3,rootMargin:'-80px 0px 0px 0px'});
+  sections.forEach(function(s){observer.observe(s);});
+})();
+</script>
+</body>
+</html>
